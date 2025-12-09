@@ -1,0 +1,501 @@
+/* Setting the font */
+@font-face {
+  font-family: "Grotesk Thin";
+  src: url("../../assets/fonts/grotesk-thin-mono.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Set default styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  font-family: "Grotesk Thin", monospace;
+}
+
+/* ASCII art styling */
+#ascii-art {
+  white-space: pre;
+  font-family: "Grotesk Thin", monospace;
+  padding: 1rem;
+  padding-left: 1.25rem;
+  margin-top: 0rem;
+  color: #000000;
+  font-size: 0.26rem;
+}
+
+/* Responsive ASCII art styling */
+@media (max-width: 768px) {
+  #ascii-art {
+    font-size: 0.2rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Navigation menu (Portfolio, CV, Bio, Contact) */
+nav .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Defining a navigation list of links */
+nav .menu li {
+  margin-left: 7rem;
+}
+
+nav .menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 100;
+}
+
+nav .menu li a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  nav .menu {
+    font-size: 0.7rem;
+    flex-direction: column;
+    align-items: flex-end; /* keep this to align items inside flex container */
+    gap: 0.5rem;
+    width: max-content; /* ensures container fits the content tightly */
+  }
+
+  nav .menu li {
+    display: block;
+    width: auto;
+  }
+}
+
+/* Styling for text box displaying nav information (portfolio, CV, bio, contact) */
+#text-box-nav {
+  white-space: pre-wrap;
+  font-family: 'Grotesk Thin', monospace;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#text-box-nav a {
+  font-size: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+#text-box-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  #text-box-nav {
+    width: 95%;
+    padding: 1rem;
+    font-size: 0.56rem;
+  }
+
+  #text-box-nav a {
+    font-size: 0.56rem;
+  }
+}
+
+/* Container for header for works */
+
+.works-container {
+  display: flex;
+  align-items: center;   
+  justify-content: space-between; 
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.works-header {
+  font-weight: normal;
+  padding-left: 1.25rem;
+  margin: 0; 
+  max-width: 60%;
+}
+
+.works-back {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  margin: 0;
+}
+
+.works-back a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+.works-back a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .works-header {
+    font-size: 1.5rem; /* smaller size for phones */
+  }
+}
+
+/* Image grid for works */
+.image-grid-brave {
+  width: 80%;
+  max-width: 70rem; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  padding-left: 1.25rem; 
+  gap: 1.25rem; 
+  justify-content: start;
+}
+
+/* Image styling */
+.image-grid-brave img {
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .image-grid-brave {
+    grid-template-columns: 1fr; /* single column on phones */
+    gap:0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Hide all images */
+  .image-grid-brave img {
+    display: none;
+  }
+
+  /* Show only the second image */
+.image-grid-brave img:nth-child(2),
+.image-grid-brave img:nth-child(3) {
+  display: block;
+}
+}
+
+/* Image grid for works */
+.image-grid-ancestral {
+  width: 80%;
+  max-width: 70rem; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  padding-left: 1.25rem; 
+  gap: 1.25rem; 
+  justify-content: start;
+}
+
+/* Image styling */
+.image-grid-ancestral img {
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .image-grid-ancestral {
+    grid-template-columns: 1fr; /* single column on phones */
+    gap:0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Hide all images */
+  .image-grid-ancestral img {
+    display: none;
+  }
+
+  /* Show only the second image */
+.image-grid-ancestral img:nth-child(2),
+.image-grid-ancestral img:nth-child(1) {
+  display: block;
+}
+
+.image-grid-ancestral img:nth-child(2) {
+  order: -1; /* Move 2nd image to the top */
+}
+}
+
+/* Image grid for works */
+.image-grid-icon {
+  width: 80%;
+  max-width: 70rem; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  padding-left: 1.25rem; 
+  gap: 1.25rem; 
+  justify-content: start;
+}
+
+/* Image styling */
+.image-grid-icon img {
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .image-grid-icon {
+    grid-template-columns: 1fr; /* single column on phones */
+    gap:0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Hide all images */
+  .image-grid-icon img {
+    display: none;
+  }
+
+  /* Show only the second image */
+.image-grid-icon img:nth-child(1) {
+  display: block;
+}
+}
+
+
+/* Images for Brave */
+.img-proto {
+    width: 100%;
+}
+
+.img-brave {
+    width: 83.5%;
+}
+
+.img-winter {
+    width: 100%;
+}
+
+.img-neutral {
+    width: 57%;
+}
+
+@media (max-width: 767px) {
+  .img-proto {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .img-brave {
+    width: 100%;
+  }
+}
+
+.img-icon-jam{
+  width: 90%;
+}
+
+.img-icon-shot{
+  width: 100%;
+}
+
+.gif-ancestral{
+  width: 100%;
+}
+
+.img-ancestral-latent{
+  width: 100%;
+}
+
+.img-ancestral{
+  width: 100%;
+}
+
+.img-debug{
+  width: 74%;
+}
+
+
+
+.img-logo {
+  display: block;
+  margin: 6.25rem auto 0 auto; 
+  width: 40%;
+}
+
+@media (max-width: 767px) {
+.img-logo {
+  display: block;
+  margin: 1.25rem 0 0 -1.5rem; /* top, right, bottom, left */
+  width: 10%;
+}
+
+
+}
+
+.works-text-container {
+  display: flex;
+  gap: 1.25rem; /* space between boxes */
+  padding-left: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.left-text-box {
+  width: 40%;
+  max-width: 20rem;
+}
+
+.right-text-box {
+  width: 49%;
+}
+
+@media (max-width: 767px) {
+  .works-text-container {
+    flex-direction: column-reverse;
+    font-size: 0.66rem;
+  }
+
+  .left-text-box,
+  .right-text-box {
+    width: 97%;
+  }
+}
+
+.references-text-box{
+  width: 90%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .references-text-box {
+    font-size: 0.66rem;
+    padding-top: 1.25rem;
+  }
+
+}
+
+/* Class to style links for works */
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Styling for proust animated text */
+#proust-animated {  
+  width: 76%;
+  font-family: "Grotesk Thin", monospace;
+  font-size: 0.9rem;
+  padding-left: 1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.25rem;
+  color: 	#000000;
+}
+
+@media (max-width: 767px) {
+  #proust-animated {
+    font-size: 0.66rem;
+    width: 90%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+
+.hyphen-phone {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hyphen-desktop {
+    display: none;
+  }
+
+  .hyphen-phone {
+    display: inline;
+  }
+}
+
+.hyphen-line {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Grotesk Thin", monospace;
+  color: #000; /* adjust color if needed */
+  font-weight: normal;
+  /* Use CSS repeating characters */
+  content: "";
+  border-bottom: 1px solid transparent;
+  letter-spacing: 0.1em;
+}
+
+.hyphen-line::before {
+  content: "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+#grain-overlay {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left: 0 */
+  pointer-events: none; /* allow clicks through */
+  height: 150%;
+  width: 150%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png") repeat;
+  opacity: 0.08;
+  z-index: 9999;
+  animation: animateGrain 6s steps(10) infinite;
+}
+
+@keyframes animateGrain{
+  0%, 100% { transform:translate(0, 0) }
+  10%{
+    transform:translate(-5%,-10%)
+  }
+  20%{
+    transform:translate(-15%,-20%)
+  }
+  30%{
+    transform:translate(-5%,-10%)
+  }
+  40%{
+    transform:translate(-15%,-20%)
+  }
+  
+  50%{
+    transform:translate(-5%,-10%)
+  }
+  60%{
+    transform:translate(-15%,-20%)
+  }
+  70%{
+    transform:translate(-5%,-10%)
+  }
+  80%{
+    transform:translate(-15%,-20%)
+  }
+  90%{
+    transform:translate(-5%,-10%)
+  }
+  100%{
+    transform:translate(-15%,-20%)
+  }
+ 
+}
