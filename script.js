@@ -102,7 +102,7 @@ const asciiArt = `
 // Text to be rendered for nav menu options
 
 const contentMap = {
-    Projects: `Brave, 2024 /// <i>Embedded AI-driven sound synthesiser, Network-bending</i>\n
+    Projects: `Brave, 2025 /// <i>Embedded AI-driven sound synthesiser, Network-bending</i>\n
 Ancestral (r)Evocations, 2024 /// <i>Archival sonification instrument, Live ML feedback soundscape</i>\n
 Iconostasis, 2023 /// <i>Audio-reactive roses, JavaScript + PureData<\i>`,
     CV: `This is the CV content.\nMore lines here...`,
@@ -124,7 +124,7 @@ instagram: @manzzzzzzzzzzd
 // Links to projects
 
 const projectsLinks = {
-  'Brave, 2024 /// <i>Embedded AI-driven sound synthesiser, Network-bending</i>\n': 'brave.html',
+  'Brave, 2025 /// <i>Embedded AI-driven sound synthesiser, Network-bending</i>\n': 'brave.html',
   'Ancestral (r)Evocations, 2024 /// <i>Archival sonification instrument, Live ML feedback soundscape</i>': 'ancestral.html',
   'Iconostasis, 2023 /// <i>Audio-reactive roses, JavaScript + PureData<\i>': 'iconostasis.html'
 };
